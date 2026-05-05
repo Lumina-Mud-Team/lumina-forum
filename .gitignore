@@ -1,0 +1,20 @@
+# NodeBB upstream — ha il suo .git, lo gestiamo come dipendenza esterna
+# Customizzazioni (temi, plugin, config diff) vivono fuori da nodebb/ in questo repo.
+nodebb/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Claude Code (per-user, not shared)
+.claude/
+
+# Logs
+*.log
+logs/
+
+# Env
+.env
+.env.local
