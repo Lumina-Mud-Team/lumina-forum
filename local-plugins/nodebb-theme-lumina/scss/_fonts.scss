@@ -1,7 +1,7 @@
 // Pull Cinzel + Crimson Text from Google Fonts. Same source the
 // public Lumina site uses, so the typography matches across
 // site → forum without diverging weights.
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap');
 
 body {
 	font-family: var(--font-body);
@@ -11,17 +11,17 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
+// Headings: Cinzel + gold + tracking, MA NIENTE uppercase globale.
+// Le poche superfici dove vogliamo "title" all-caps (brand wordmark,
+// h1 del topic, category card titles, banner categoria) lo dichiarano
+// esplicitamente nei loro file. Per tutto il resto, mixed case.
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: var(--font-display);
 	font-weight: 600;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
+	letter-spacing: 0.04em;
 	color: var(--lumina-fg-gold);
 }
-
-h1, .h1 { letter-spacing: 0.14em; }
-h4, h5, h6, .h4, .h5, .h6 { letter-spacing: 0.18em; }
 
 // Lumina "eyebrow" style — used on category headers
 .eyebrow,

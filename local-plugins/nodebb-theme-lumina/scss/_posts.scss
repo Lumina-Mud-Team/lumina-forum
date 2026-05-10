@@ -39,8 +39,8 @@ body.template-topic .topic .posts-container {
 // Post body content (markdown / WYSIWYG output)
 [component="post/content"],
 .post-content {
-	font-family: var(--font-serif);
-	font-size: 1.05rem;
+	font-family: var(--font-body);
+	font-size: 1.3125rem;
 	line-height: 1.7;
 	color: var(--lumina-fg);
 }
@@ -80,8 +80,7 @@ body.template-topic .topic .posts-container {
 [component="post/anonymous"],
 .post-info .username a {
 	font-family: var(--font-display);
-	letter-spacing: 0.14em;
-	text-transform: uppercase;
+	letter-spacing: 0.02em;
 	color: var(--lumina-fg-gold);
 	font-size: 1rem;
 }
