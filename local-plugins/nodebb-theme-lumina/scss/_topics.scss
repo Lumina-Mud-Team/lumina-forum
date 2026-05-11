@@ -113,6 +113,25 @@
 	font-family: var(--font-body);
 	font-style: normal;
 }
+// La regola sopra ha specificità 0,2,0 e batte il `.fa` (0,1,0) di
+// Font Awesome: senza questo override, gli `<i>` delle stat (vote/post/
+// views) e il checkbox sotto l'avatar perdono il font FA e mostrano
+// quadratini al posto dei glifi. Ripristiniamo esplicitamente.
+[component="category/topic"] i.fa,
+[component="category/topic"] i.fas,
+[component="category/topic"] i.far,
+[component="category/topic"] i.fal,
+[component="category/topic"] i.fab,
+[component="category/topic"] i.fa-solid,
+[component="category/topic"] i.fa-regular,
+[component="category/topic"] i.fa-light,
+[component="category/topic"] i.fa-brands,
+[component="category/topic"] .topic-stat i,
+[component="category/topic"] .checkbox i,
+[component="category/topic"] [component="topic/select"] {
+	font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands',
+		'FontAwesome' !important;
+}
 
 // Topic-select checkbox (icona quadratino sotto avatar quando showSelect=true,
 // utenti admin). Harmony lo mette via .hover-visible che richiede un
