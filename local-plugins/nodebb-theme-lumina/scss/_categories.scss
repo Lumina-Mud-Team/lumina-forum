@@ -111,17 +111,27 @@
 // Watch / unwatch / new-topic buttons inherit `.btn-primary` styling
 // (handled by _buttons.scss).
 
-// Breadcrumbs (rune-divider style)
+// Breadcrumbs (rune-divider style). Visibili in alto su category/topic/
+// world/tag — danno il path di navigazione e l'unico modo non-logo per
+// tornare a Home. Padding verticale + border-bottom soft per non farli
+// sparire visivamente tra la navbar e il category-header.
 .breadcrumb {
 	background: transparent;
 	font-family: var(--font-body);
 	font-size: 1rem;
 	letter-spacing: 0;
-	padding: 0.5rem 0;
+	padding: 0.75rem 0;
+	margin-bottom: 0.75rem !important;
+	border-bottom: 1px solid var(--lumina-border-soft);
 }
 .breadcrumb-item,
 .breadcrumb-item a {
 	color: var(--lumina-fg-muted);
+	text-decoration: none;
+	transition: color 0.15s ease;
+}
+.breadcrumb-item a:hover {
+	color: var(--lumina-gold-hi);
 }
 .breadcrumb-item.active {
 	color: var(--lumina-fg-gold);
@@ -130,4 +140,6 @@
 	color: var(--lumina-gold-dim);
 	content: "◆";
 	padding: 0 0.5rem;
+	font-size: 0.7em;
+	vertical-align: middle;
 }

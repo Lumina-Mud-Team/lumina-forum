@@ -112,6 +112,88 @@ pre code.hljs {
 	font-family: inherit;
 }
 
+// Highlight.js token colors — palette Lumina (gold / parchment / verde-success).
+// nodebb-plugin-markdown carica un tema hljs scelto da ACP (default rossastro)
+// che faceva le variabili rosse. Override per:
+//   - tenere tutto su gold/parchment (warm)
+//   - usare success per le stringhe (un solo accent verde, leggibile)
+//   - shadow-hi solo per deletion/error (heretic palette = "qualcosa di rotto")
+// Specificità più alta del file CSS standalone del plugin grazie a `pre code.hljs`.
+pre code.hljs,
+.hljs {
+	color: var(--lumina-fg) !important;
+	background: transparent !important;
+}
+
+.hljs-comment,
+.hljs-quote {
+	color: var(--lumina-fg-dim) !important;
+	font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-tag .hljs-name,
+.hljs-built_in {
+	color: var(--lumina-gold) !important;
+}
+
+.hljs-string,
+.hljs-doctag,
+.hljs-regexp,
+.hljs-bullet {
+	color: var(--lumina-success) !important;
+}
+
+.hljs-number,
+.hljs-symbol,
+.hljs-meta {
+	color: var(--lumina-gold-hi) !important;
+}
+
+.hljs-type,
+.hljs-class .hljs-title,
+.hljs-section,
+.hljs-title {
+	color: var(--lumina-fg-gold) !important;
+}
+
+.hljs-function .hljs-title,
+.hljs-attr,
+.hljs-attribute,
+.hljs-name {
+	color: var(--lumina-fg-gold) !important;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-params {
+	color: var(--lumina-fg) !important;
+}
+
+.hljs-operator,
+.hljs-punctuation {
+	color: var(--lumina-fg-muted) !important;
+}
+
+.hljs-link {
+	color: var(--lumina-info) !important;
+	text-decoration: underline;
+}
+
+.hljs-emphasis { font-style: italic; }
+.hljs-strong   { font-weight: 700; }
+
+.hljs-deletion {
+	color: var(--lumina-shadow-hi) !important;
+	background: rgba(217, 146, 138, 0.08) !important;
+}
+.hljs-addition {
+	color: var(--lumina-success) !important;
+	background: rgba(109, 218, 104, 0.08) !important;
+}
+
 // Badges (post counts, unread indicators, group flair)
 .badge {
 	font-family: var(--font-body);
